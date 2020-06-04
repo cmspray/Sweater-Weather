@@ -7,4 +7,4 @@ Import the project into android studio.
 
 Click run.
 
-A debug version of the app can be found [here](todo)
+A debug version of the app can be found [here](https://github.com/cmspray/Sweater-Weather/releases/download/1.0/app-debug.apk)
