@@ -53,5 +53,6 @@ data class WeatherInfoDTO (
 	@SerializedName("longitude") val longitude : Double,
 	@SerializedName("distance") val distance : Double,
 	@SerializedName("elevation") val elevation : Int,
-	@SerializedName("utcTime") val utcTime : String
+	@SerializedName("utcTime") val utcTime : String,
+	val shouldWearSweater: Boolean = temperature <= 55
 )
