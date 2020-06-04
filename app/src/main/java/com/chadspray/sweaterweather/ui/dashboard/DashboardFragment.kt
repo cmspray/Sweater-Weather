@@ -1,7 +1,6 @@
 package com.chadspray.sweaterweather.ui.dashboard
 
 import WeatherDTO
-import android.location.Geocoder
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -16,14 +15,12 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.chadspray.sweaterweather.R
 import com.chadspray.sweaterweather.service.SweaterResponse
-import com.chadspray.sweaterweather.ui.home.HomeFragment
-import com.chadspray.sweaterweather.ui.home.HomeViewModel
 import com.chadspray.sweaterweather.ui.weather.WeatherView
-import com.google.android.gms.location.LocationServices
+import com.chadspray.sweaterweather.ui.weather.WeatherViewModel
 
 class DashboardFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var dashboardViewModel: WeatherViewModel
     private lateinit var errorTextView: TextView
     private lateinit var refreshLayout: SwipeRefreshLayout
     private lateinit var weatherView: WeatherView
@@ -35,7 +32,7 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         dashboardViewModel =
-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
+            ViewModelProviders.of(this).get(WeatherViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
         errorTextView = root.findViewById(R.id.errorView)

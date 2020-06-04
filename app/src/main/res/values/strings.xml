@@ -6,8 +6,8 @@
     <string name="requires_location_permission">Please provide location permission to retrieve local weather.</string>
     <string name="could_not_find_weather">Check internet connection and try again.</string>
     <string name="currentTemp">Current Temp: %1$sºF</string>
-    <string name="highLowText">Low: %1$sºF High %2$sºF</string>
-    <string name="require_sweater_text">You should wear a sweater today!</string>
+    <string name="highLowText">Low: %1$sºF High: %2$sºF</string>
+    <string name="require_sweater_text">You should wear a sweater today!🧥</string>
     <string name="do_not_need_sweater_text">You won\'t need a sweater today!</string>
     <string name="enter_zip_code">Enter zipcode</string>
     <string name="enter_zip_code_to_get_weather">Enter a valid zip code to find the weather!</string>

@@ -23,7 +23,8 @@ open class WeatherViewModel : ViewModel() {
                     liveWeatherData.postValue(SweaterResponse(false))                }
 
                 override fun onResponse(call: Call<WeatherDTO>, response: Response<WeatherDTO>) {
-                    liveWeatherData.postValue(SweaterResponse(response.isSuccessful, response.body()))
+                    liveWeatherData.postValue(SweaterResponse(response.isSuccessful
+                            && null != response.body()?.today, response.body()))
                 }
             })
         } ?: liveWeatherData.postValue(SweaterResponse(false))

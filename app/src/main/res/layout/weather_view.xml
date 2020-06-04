@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/cityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/sweaterTextView"
         app:layout_constraintTop_toBottomOf="@+id/sweaterTextView"
         tools:text="Kansas City" />
@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/cityTextView"
         app:layout_constraintTop_toTopOf="@+id/cityTextView"
         tools:text="Missouri" />
@@ -29,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/cityTextView"
         app:layout_constraintTop_toBottomOf="@+id/cityTextView"
         tools:text="Current Temp: 71ºF" />
@@ -38,6 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/currentTempView"
         app:layout_constraintTop_toBottomOf="@+id/currentTempView"
         tools:text="Passing clouds. Warm." />
@@ -47,6 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/currentDescription"
         app:layout_constraintTop_toBottomOf="@+id/currentDescription"
         tools:text="Low: 60ºF High 90ºF" />
@@ -56,9 +60,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/currentDescription"
         app:layout_constraintStart_toEndOf="@+id/currentDescription"
-        app:layout_constraintTop_toTopOf="@id/currentDescription"
-        app:layout_constraintBottom_toBottomOf="@id/currentDescription"/>
+        app:layout_constraintTop_toTopOf="@id/currentDescription" />
 
     <TextView
         android:id="@+id/sweaterTextView"
@@ -66,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="You do not need a sweater!" />

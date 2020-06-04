@@ -4,7 +4,6 @@ import WeatherDTO
 import android.location.Geocoder
 import android.location.Location
 import android.os.Looper
-import android.util.Log
 import androidx.lifecycle.*
 import com.chadspray.sweaterweather.service.SweaterResponse
 import com.chadspray.sweaterweather.ui.weather.WeatherViewModel
