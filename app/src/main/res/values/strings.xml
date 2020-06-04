@@ -3,5 +3,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="requiresLocationPermission">Please provide location permission to retrieve local weather.</string>
+    <string name="requires_location_permission">Please provide location permission to retrieve local weather.</string>
+    <string name="could_not_find_weather">Check internet connection and try again.</string>
 </resources>
