@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/cityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/sweaterTextView"
+        app:layout_constraintTop_toBottomOf="@+id/sweaterTextView"
+        tools:text="Kansas City" />
+
+    <TextView
+        android:id="@+id/stateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/cityTextView"
+        app:layout_constraintTop_toTopOf="@+id/cityTextView"
+        tools:text="Missouri" />
+
+    <TextView
+        android:id="@+id/currentTempView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/cityTextView"
+        app:layout_constraintTop_toBottomOf="@+id/cityTextView"
+        tools:text="Current Temp: 71ºF" />
+
+    <TextView
+        android:id="@+id/currentDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/currentTempView"
+        app:layout_constraintTop_toBottomOf="@+id/currentTempView"
+        tools:text="Passing clouds. Warm." />
+
+    <TextView
+        android:id="@+id/highLowView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/currentDescription"
+        app:layout_constraintTop_toBottomOf="@+id/currentDescription"
+        tools:text="Low: 60ºF High 90ºF" />
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toEndOf="@+id/currentDescription"
+        app:layout_constraintTop_toTopOf="@id/currentDescription"
+        app:layout_constraintBottom_toBottomOf="@id/currentDescription"/>
+
+    <TextView
+        android:id="@+id/sweaterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="You do not need a sweater!" />
+</androidx.constraintlayout.widget.ConstraintLayout>
