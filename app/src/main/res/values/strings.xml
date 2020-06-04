@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Sweater Weather</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_search">Search</string>
     <string name="title_notifications">Notifications</string>
     <string name="requires_location_permission">Please provide location permission to retrieve local weather.</string>
     <string name="could_not_find_weather">Check internet connection and try again.</string>
+    <string name="currentTemp">Current Temp: %1$sºF</string>
+    <string name="highLowText">Low: %1$sºF High %2$sºF</string>
+    <string name="require_sweater_text">You should wear a sweater today!</string>
+    <string name="do_not_need_sweater_text">You won\'t need a sweater today!</string>
 </resources>
