@@ -3,11 +3,8 @@ package com.chadspray.sweaterweather.ui.dashboard
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.chadspray.sweaterweather.ui.weather.WeatherViewModel
 
-class DashboardViewModel : ViewModel() {
+class DashboardViewModel : WeatherViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
-    }
-    val text: LiveData<String> = _text
 }

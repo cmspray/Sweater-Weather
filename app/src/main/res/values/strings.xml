@@ -9,4 +9,6 @@
     <string name="highLowText">Low: %1$sºF High %2$sºF</string>
     <string name="require_sweater_text">You should wear a sweater today!</string>
     <string name="do_not_need_sweater_text">You won\'t need a sweater today!</string>
+    <string name="enter_zip_code">Enter zipcode</string>
+    <string name="enter_zip_code_to_get_weather">Enter a valid zip code to find the weather!</string>
 </resources>

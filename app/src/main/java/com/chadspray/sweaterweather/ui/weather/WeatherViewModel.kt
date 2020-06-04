@@ -14,8 +14,9 @@ import retrofit2.Response
 open class WeatherViewModel : ViewModel() {
 
     private val liveWeatherData = MutableLiveData<SweaterResponse<WeatherDTO>>()
+    fun getLiveWeatherData(): LiveData<SweaterResponse<WeatherDTO>> = liveWeatherData
 
-    fun getWeatherData(zip: String?): LiveData<SweaterResponse<WeatherDTO>> {
+    fun refreshData(zip: String?): LiveData<SweaterResponse<WeatherDTO>> {
         zip?.let {
             SweaterWeatherRetrofitCreator.weatherService.getWeather(ZipcodeDTO(zip)).enqueue(object : Callback<WeatherDTO> {
                 override fun onFailure(call: Call<WeatherDTO>, t: Throwable) {

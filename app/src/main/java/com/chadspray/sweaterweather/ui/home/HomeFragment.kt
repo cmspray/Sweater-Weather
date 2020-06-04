@@ -5,7 +5,6 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,9 +21,8 @@ import com.google.android.gms.location.LocationServices
 
 const val LOCATION_REQUEST_CODE = 5
 
-class HomeFragment : Fragment() {
+open class HomeFragment : Fragment() {
 
-    private val TAG = HomeFragment::class.java.simpleName
     private lateinit var homeViewModel: HomeViewModel
     private lateinit var errorTextView: TextView
     private lateinit var refreshLayout: SwipeRefreshLayout
@@ -37,6 +35,7 @@ class HomeFragment : Fragment() {
     ): View? {
         homeViewModel =
             ViewModelProviders.of(this).get(HomeViewModel::class.java)
+        homeViewModel.geocoder = Geocoder(context)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         errorTextView = root.findViewById(R.id.errorView)
         refreshLayout = root.findViewById(R.id.refreshLayout)
@@ -61,10 +60,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun requestWeather() {
-        Log.d(TAG, "Requesting Weather")
         refreshLayout.isRefreshing = true
-        homeViewModel.getLocalWeather(LocationServices.getFusedLocationProviderClient(context!!), Geocoder(context))
-           .observe(this, showWeather())
+        homeViewModel.getLocalWeather(LocationServices.getFusedLocationProviderClient(context!!))
+            .observe(this, showWeather())
     }
 
     private fun showWeather() = Observer<SweaterResponse<WeatherDTO>> { weatherResponse ->

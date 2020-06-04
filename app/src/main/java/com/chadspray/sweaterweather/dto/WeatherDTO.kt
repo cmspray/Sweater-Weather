@@ -14,9 +14,5 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 data class WeatherDTO (
 
-	@SerializedName("today") val today : WeatherInfoDTO,
-	@SerializedName("daily") val daily : List<WeatherInfoDTO>,
-	@SerializedName("hourly") val hourly : List<WeatherInfoDTO>,
-	@SerializedName("astronomy") val astronomy : AstronomyDTO,
-	@SerializedName("alerts") val alerts : List<String>
+	@SerializedName("today") val today : WeatherInfoDTO
 )
